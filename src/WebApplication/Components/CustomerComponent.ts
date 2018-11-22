@@ -18,11 +18,10 @@ export class CustomerComponent {
         this.customers = [
             { CustomerId: 101, CustomerName: 'Aravind', CustomerAddress: 'HYD' },
             { CustomerId: 102, CustomerName: 'Ravi', CustomerAddress: 'MYP' },
-            { CustomerId: 103, CustomerName: 'Kiran', CustomerAddress: 'DMK' }
+            { CustomerId: 103, CustomerName: 'Kiran', CustomerAddress: 'MUM' }
         ];
     }
     addCustomer() {
-        console.log(this.cust);
         this.customers.push(this.cust);
         this.cust = new CustomerModel();
     }

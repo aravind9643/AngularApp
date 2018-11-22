@@ -1,24 +1,22 @@
-<div class="container text-center col-lg-4 col-md-6 col-sm-12" [hidden] = "!gridData.length">
-        <table class="table table-bordered">
-            <tr>
-                <td align="center"  [attr.colspan]="gridColumns.length+2">{{EntityName}}</td>
-            </tr>
-            <tr>
-                <th align="center" *ngFor="let colName of gridColumns">
-                    {{colName}}
-                </th>
-                <th>Action</th>
-            </tr>
+<table class="table table-bordered" [hidden]="!gridData.length">
+    <tr>
+        <td align="center" [attr.colspan]="gridColumns.length+2">{{EntityName}}</td>
+    </tr>
+    <tr>
+        <th align="center" *ngFor="let colName of gridColumns">
+            {{colName}}
+        </th>
+        <th>Action</th>
+    </tr>
 
-            <tr *ngFor="let colObj of gridData">
-                <td *ngFor="let colName of gridColumns">
-                    {{colObj[colName]}}
-                </td>
-                <td>
-                    <a href="" (click)="!!Select(colObj)"><i class="fas fa-edit"></i></a>
-                        &nbsp;
-                    <a href="" (click)="!!Delete(colObj)"><i class="fas fa-times"></i></a> 
-                </td>
-            </tr>
-        </table>
-    </div>
+    <tr *ngFor="let colObj of gridData">
+        <td *ngFor="let colName of gridColumns">
+            {{colObj[colName]}}
+        </td>
+        <td>
+            <a href="" (click)="!!Select(colObj)"><i class="fas fa-edit"></i></a>
+            &nbsp;
+            <a href="" (click)="!!Delete(colObj)"><i class="fas fa-times"></i></a>
+        </td>
+    </tr>
+</table>
