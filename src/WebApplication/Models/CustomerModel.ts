@@ -1,5 +1,5 @@
 export class CustomerModel {
-    CustomerId: number = 101;
+    CustomerId: number;
     CustomerName: string;
     CustomerAddress: string;
 }

@@ -15,7 +15,7 @@ import { MainRoutes } from '../Routing/MainRoutes';
     HomeComponent,
     EmployeeComponent,
     HelpComponent,
-    PhotosComponent
+    PhotosComponent,
   ],
   imports: [
     BrowserModule,
