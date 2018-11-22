@@ -1,0 +1,21 @@
+ul li {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin: 4px solid black;
+}
+.pager {
+    text-align: center;
+}
+.pager li{
+    display: inline-block;
+    text-align: center;
+}
+.btn {
+    background-color: #39149d;
+    color: white;
+}
+.btn:hover {
+    background-color: #280096;
+    color: white;
+}

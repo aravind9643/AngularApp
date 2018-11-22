@@ -1,0 +1,21 @@
+<div class="container text-center col-lg-4 col-md-6 col-sm-12">
+    <form class="form-group">
+        <input type="text" class="form-control mt-2" name="cust.id" placeholder="ID" [(ngModel)]="cust.CustomerId">
+        <input type="text" class="form-control mt-2" name="cust.name" placeholder="Name" [(ngModel)]="cust.CustomerName">
+        <input type="text" class="form-control mt-2" name="cust.add" placeholder="Address" [(ngModel)]="cust.CustomerAddress">
+        <button class="btn btn-primary mt-2" (click)="addCustomer()">Submit</button>
+    </form>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+        <tr *ngFor="let cust of customers">
+            <td>{{cust.CustomerId}}</td>
+            <td>{{cust.CustomerName}}</td>
+            <td>{{cust.CustomerAddress}}</td>
+        </tr>
+    </table>
+</div>

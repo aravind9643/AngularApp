@@ -1,0 +1,35 @@
+<div class="container text-center col-lg-4 col-md-6 col-sm-12">
+    <form class="form-group">
+        <input type="text" class="form-control mt-2" placeholder="EmpId" value="" name="id" [(ngModel)]="Emp.EmpId">
+        <input type="text" class="form-control mt-2" placeholder="EmpName" value="" name="name" [(ngModel)]="Emp.EmpName">
+        <input type="text" class="form-control mt-2" placeholder="EmpSal" value="" name="sal" [(ngModel)]="Emp.EmpSal">
+        <button type="button" class="btn mt-2" *ngIf="ShowBtn" (click)="addEmp()">Add</button>
+        &nbsp;
+        <button type="button" class="btn mt-2" *ngIf="!ShowBtn" (click)="updateEmp(Emp)">Update</button>
+        &nbsp;
+        <button type="button" class="btn mt-2" (click)="resetEmp()">Reset</button>
+    </form>
+    <div class="card" [hidden]="!Employees.length">
+        <h6 class="card-header">Total Employees: {{Employees.length}}</h6>
+        <div class="card-body">
+            <table class="table table-bordered">
+                <tr>
+                    <th>EmpID</th>
+                    <th>EmpName</th>
+                    <th>EmpSalary</th>
+                    <th>Action</th>
+                </tr>
+                <tr *ngFor="let e of Employees">
+                    <td>{{e.EmpId}}</td>
+                    <td>{{e.EmpName}}</td>
+                    <td>{{e.EmpSal}}</td>
+                    <td>
+                        <a href="" (click)="!!deleteEmp(e)"><i class="fas fa-times"></i></a>
+                        &nbsp;
+                        <a href="" (click)="!!modifyEmp(e)"><i class="fas fa-edit"></i></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

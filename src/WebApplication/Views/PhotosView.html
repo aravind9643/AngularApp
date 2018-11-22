@@ -1,0 +1,13 @@
+<div class="container">
+    <ul>
+        <li *ngFor="let data of dataarr"><a [href]="data.url"><img [src]="data.thumbnailUrl"></a></li>
+    </ul>
+</div>
+
+<ul class="pager">
+    <li><button class="btn" href="" (click)="prev()" [disabled]="!page">Prev</button></li>
+    <li>
+        <p>{{page}}</p>
+    </li>
+    <li><button class="btn" href="" (click)="next()">Next</button></li>
+</ul>
