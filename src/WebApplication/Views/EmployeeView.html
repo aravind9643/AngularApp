@@ -1,18 +1,15 @@
 <div class="container text-center col-lg-4 col-md-6 col-sm-12">
     <form class="form-group">
-        <input type="text" class="form-control mt-2" placeholder="EmpId" value="" name="id" [(ngModel)]="Emp.EmpId">
-        <input type="text" class="form-control mt-2" placeholder="EmpName" value="" name="name" [(ngModel)]="Emp.EmpName">
-        <input type="text" class="form-control mt-2" placeholder="EmpSal" value="" name="sal" [(ngModel)]="Emp.EmpSal">
+        <input type="text" class="form-control mt-2" placeholder="EmpId" value="" name="id" [(ngModel)]="Emp.Id">
+        <input type="text" class="form-control mt-2" placeholder="EmpName" value="" name="name" [(ngModel)]="Emp.Name">
+        <input type="text" class="form-control mt-2" placeholder="EmpSal" value="" name="sal" [(ngModel)]="Emp.Salary">
         <button type="button" class="btn mt-2" *ngIf="ShowBtn" (click)="addEmp()">Add</button>
         &nbsp;
         <button type="button" class="btn mt-2" *ngIf="!ShowBtn" (click)="updateEmp(Emp)">Update</button>
         &nbsp;
         <button type="button" class="btn mt-2" (click)="resetEmp()">Reset</button>
     </form>
-    <div class="card" [hidden]="!Employees.length">
-        <h6 class="card-header">Total Employees: {{Employees.length}}</h6>
-        <div class="card-body">
-            <table class="table table-bordered">
+            <!-- <table class="table table-bordered">
                 <tr>
                     <th>EmpID</th>
                     <th>EmpName</th>
@@ -29,7 +26,11 @@
                         <a href="" (click)="!!modifyEmp(e)"><i class="fas fa-edit"></i></a>
                     </td>
                 </tr>
-            </table>
-        </div>
-    </div>
+            </table> -->
+            <grid-view 
+            [grid-data]="Employees" 
+            [grid-entityname]="title" 
+            (grid-selected)="modifyEmp($event)"
+            (grid-deleted)="deleteEmp($event)">
+        </grid-view>
 </div>

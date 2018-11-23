@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { GridModule } from '../Modules/GridModule';
 
 import { HomeComponent } from '../Components/HomeComponent';
 import { EmployeeComponent } from '../Components/EmployeeComponent';
@@ -15,13 +16,14 @@ import { MainRoutes } from '../Routing/MainRoutes';
     HomeComponent,
     EmployeeComponent,
     HelpComponent,
-    PhotosComponent,
+    PhotosComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(MainRoutes),
-    HttpClientModule
+    HttpClientModule,
+    GridModule
   ],
   providers: [],
   bootstrap: [HomeComponent]

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 @Component ({
     templateUrl: '../Views/AboutView.html',
@@ -8,12 +7,8 @@ import { HttpClient } from '@angular/common/http';
 
 export class AboutComponent {
     data;
-    constructor(private lahari: HttpClient) {
+    constructor() {
 
     }
-    ngOnInit() {
-      this.lahari.get("http://localhost:3000/customers").subscribe(data => {
-        this.data = data;
-    });
-    }
+
 }

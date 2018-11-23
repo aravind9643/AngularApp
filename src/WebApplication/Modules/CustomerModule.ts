@@ -5,17 +5,17 @@ import  { FormsModule } from '@angular/forms';
 
 import { CustomerComponent } from '../Components/CustomerComponent';
 import { CustomerRoutes } from '../Routing/CustomerRoutes';
-import { GridComponent } from '../Components/GridComponent';
+import { GridModule } from '../Modules/GridModule';
 
 @NgModule({
   declarations: [
-    CustomerComponent,
-    GridComponent
+    CustomerComponent
   ],
   imports: [
     FormsModule,
     RouterModule.forChild(CustomerRoutes),
-    CommonModule
+    CommonModule,
+    GridModule
   ],
   providers: [],
   bootstrap: [CustomerComponent]

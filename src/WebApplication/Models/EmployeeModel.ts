@@ -1,5 +1,5 @@
 export class EmployeeModel {
-    EmpId: number;
-    EmpName: string;
-    EmpSal: number;
+    Id: number;
+    Name: string;
+    Salary: number;
 }

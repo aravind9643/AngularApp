@@ -16,9 +16,7 @@ export class CustomerComponent {
     ngOnInit() {
         this.cust = new CustomerModel();
         this.customers = [
-            { CustomerId: 101, CustomerName: 'Aravind', CustomerAddress: 'HYD' },
-            { CustomerId: 102, CustomerName: 'Ravi', CustomerAddress: 'MYP' },
-            { CustomerId: 103, CustomerName: 'Kiran', CustomerAddress: 'MUM' }
+            {Id: 101, Name: "Aravind",Address: "HYD"}
         ];
     }
     addCustomer() {
@@ -31,10 +29,10 @@ export class CustomerComponent {
     updateCustomer(e) {
         for(var i=0;i<this.customers.length;i++)
         {
-            if(this.customers[i].CustomerId==e.CustomerId)
+            if(this.customers[i].Id==e.Id)
             {
-                this.customers[i].CustomerName=e.CustomerName;
-                this.customers[i].CustomerAddress=e.CustomerAddress;
+                this.customers[i].Name=e.Name;
+                this.customers[i].Address=e.Address;
                 alert("Record Updated");
             }
         }
