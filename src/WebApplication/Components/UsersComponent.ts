@@ -23,17 +23,13 @@ export class UsersComponent {
     LoadData() {
         this.http.get('http://127.0.0.1:5000/users').subscribe((data: CustomerModel[]) => {
             this.users = data;
-            console.log(typeof (this.users));
-            console.log(this.users);
             this.cols = Object.keys(data[0]);
-            console.log(this.cols);
         });
     }
     addUser(user) {
         let apiheaders = new HttpHeaders();
         apiheaders.append('Content-Type', 'application/json');
         this.http.post('http://127.0.0.1:5000/users', user, { headers: apiheaders }).subscribe(res => {
-            console.log(res);
             this.users.push(res);
         });
         this.user = new UserModel();
