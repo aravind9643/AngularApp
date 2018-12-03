@@ -10,7 +10,7 @@ export class GridComponent {
 
     @Output("grid-deleted")
     deleted: EventEmitter<Object> = new EventEmitter<Object>();
- 
+
     gridColumns: Array<Object> = new Array<Object>();
     gridData: Array<Object> = new Array<Object>();
 
@@ -20,12 +20,11 @@ export class GridComponent {
     @Input("grid-data")
     set gridDataSet(_gridData: Array<Object>) {
         if (_gridData.length > 0) {
-                var columnNames = Object.keys(_gridData[0]);
-                for (var i = 0; i < columnNames.length; i++) {
-                    this.gridColumns.push(columnNames[i]);
-                }
+            var columnNames = Object.keys(_gridData[0]);
+            for (var i = 0; i < columnNames.length; i++) {
+                this.gridColumns.push(columnNames[i]);
+            }
             this.gridData = _gridData;
-            console.log(this.gridData.length);
         }
     }
 

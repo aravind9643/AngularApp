@@ -9,6 +9,7 @@ import { HomeComponent } from '../Components/HomeComponent';
 import { EmployeeComponent } from '../Components/EmployeeComponent';
 import { PhotosComponent } from '../Components/PhotosComponent';
 import { HelpComponent } from '../Components/HelpComponent';
+import { UsersComponent } from '../Components/UsersComponent';
 import { MainRoutes } from '../Routing/MainRoutes';
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MainRoutes } from '../Routing/MainRoutes';
     HomeComponent,
     EmployeeComponent,
     HelpComponent,
-    PhotosComponent
+    PhotosComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

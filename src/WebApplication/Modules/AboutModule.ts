@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import  { FormsModule } from '@angular/forms';
+import  { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -15,7 +15,8 @@ import { AboutRoutes } from '../Routing/AboutRoutes';
     FormsModule,
     RouterModule.forChild(AboutRoutes),
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AboutComponent]

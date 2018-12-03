@@ -14,8 +14,8 @@ export class EmployeeComponent {
     title: string = "Employees";
     constructor() {
         this.Emp = new EmployeeModel();
-        this.Employees =[
-            {Id: 101,Name:"Aravind",Salary:5000}
+        this.Employees = [
+            { Id: 101, Name: "Aravind", Salary: 5000 }
         ];
     }
     ngOnInit() {

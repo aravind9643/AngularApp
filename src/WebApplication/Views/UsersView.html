@@ -1,0 +1,17 @@
+<div class="container text-center col-lg-4 col-md-6 col-sm-12">
+    <form class="form-group">
+        <input type="number" class="form-control" name="age" [(ngModel)]="user.age" placeholder="Age">
+        <input type="number" class="form-control" name="id" [(ngModel)]="user.id" placeholder="ID">
+        <input type="text" class="form-control" name="name" [(ngModel)]="user.name" placeholder="Name">
+        <input type="text" class="form-control" name="occupation" [(ngModel)]="user.occupation" placeholder="Occupation">
+        <button type="submit" class="btn btn-primary" (click)="addUser(user)">Add User</button>
+    </form>
+    <table class="table table-bordered">
+        <tr>
+            <th *ngFor="let col of cols">{{col}}</th>
+        </tr>
+        <tr *ngFor="let user of users">
+            <td *ngFor="let col of cols">{{user[col]}}</td>
+        </tr>
+    </table>
+</div>
